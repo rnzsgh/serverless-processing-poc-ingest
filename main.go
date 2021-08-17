@@ -28,6 +28,13 @@ func handler(ctx context.Context, kinesisEvent events.KinesisEvent) error {
 			return fmt.Errorf("Failed to unmarshal event: %v", err)
 		}
 
+		for _, event := range group.Events {
+			if event == nil {
+
+			}
+
+		}
+
 		fmt.Println("record handled")
 	}
 
